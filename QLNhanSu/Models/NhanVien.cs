@@ -31,5 +31,11 @@ namespace QLNhanSu.Models
         [Required]
         [StringLength(250)]
         public string Email { get; set; }
+
+        public CTBangCong CTBangCongNhanVien { get; set; }
+        public CTBangLuong CTBangLuongNhanVien { get; set; }
+        public HopDong HopDongNhanVien { get; set; }
+        public NghiPhep NghiPhepNhanVien { get; set; }
+        public PhieuUngLuong PhieuUngLuongNhanVien { get; set; }
     }
 }

@@ -18,5 +18,6 @@ namespace QLNhanSu.Models
 
         [Required]   
         public double SoGioPT {  get; set; }
+        public CTBangCong CTBangCongPhieuPhuTroi { get; set; }
     }
 }

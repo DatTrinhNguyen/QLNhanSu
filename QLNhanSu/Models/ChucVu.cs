@@ -17,6 +17,7 @@ namespace QLNhanSu.Models
         public string TenChuCVu {  get; set; }
         [Required]
         public float PhuCapCV { get; set; }
+        public HopDong HopDongChucVu { get; set; }
 
     }
 }

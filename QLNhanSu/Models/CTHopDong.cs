@@ -11,13 +11,13 @@ namespace QLNhanSu.Models
     public class CTHopDong
     {
         [Required][StringLength(10)]
-        [ForeignKey(nameof(PhuCap))]
+        [ForeignKey(nameof(MaPhuCap))]
         public string MaPhuCap {  get; set; }
-        public CTHopDong CTHopDongPhuCap { get; set; }
+        public PhuCap CTHopDongPhuCap { get; set; }
 
         [Required][StringLength(10)]
-        [ForeignKey(nameof(HopDong))]
+        [ForeignKey(nameof(MaHD))]
         public string MaHD { get; set; }
-        public CTHopDong CTHopDongHopDong { get; set; }
+        public HopDong CTHopDongHopDong { get; set; }
     }
 }

@@ -12,28 +12,28 @@ namespace QLNhanSu.Models
     {
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(NhanVien))]
+        [ForeignKey(nameof(MaNhanVien))]
         public string MaNhanVien {  get; set; }
-        public CTBangCong CTBangCongNhanVien { get; set; }
+        public NhanVien CTBangCongNhanVien { get; set; }
         
 
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(LoaiCa))]
+        [ForeignKey(nameof(MaLoaiCa))]
         public string MaLoaiCa {  get; set; }
-        public CTBangCong CTBangCongLoaiCa { get; set; }
+        public LoaiCa CTBangCongLoaiCa { get; set; }
 
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(LoaiCong))]
+        [ForeignKey(nameof(MaLoaiCong))]
         public string MaLoaiCong { get; set; }
-        public CTBangCong CTBangCongLoaiCong { get; set; }
+        public LoaiCong CTBangCongLoaiCong { get; set; }
 
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(PhieuPhuTroi))]
+        [ForeignKey(nameof(MaPhieuPT))]
         public string MaPhieuPT {  get; set; }
-        public CTBangCong CTBangCongPhieuPhuTroi {  get; set; }
+        public PhieuPhuTroi CTBangCongPhieuPhuTroi {  get; set; }
 
 
         [Required]

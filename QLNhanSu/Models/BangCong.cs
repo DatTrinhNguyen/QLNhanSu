@@ -12,14 +12,15 @@ namespace QLNhanSu.Models
     {
         [Key]
         [StringLength(10)]
-        public string MaBangCong {  get; set; }
+        public string MaBangCong { get; set; }
 
-        [StringLength(10)]
-        [ForeignKey(nameof(KyLuong))]
-        public string MaKyLuong { get; set; }
-        public KyLuong KyLuongBangCong { get; set; }
+        [StringLength(8)]
+        [Required]
+        public string MaKyLuong { get; set; } 
 
+        public KyLuong KyLuong { get; set; } 
         [Required]
         public DateTime NgayLapBang { get; set; }
     }
+
 }

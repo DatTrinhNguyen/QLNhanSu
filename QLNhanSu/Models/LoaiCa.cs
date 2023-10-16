@@ -20,5 +20,6 @@ namespace QLNhanSu.Models
         [Required]
         [StringLength(250)]
         public string MoTa { get; set; }
+        public CTBangCong CTBangCongLoaiCa { get; set; }
     }
 }

@@ -15,15 +15,16 @@ namespace QLNhanSu.Models
         public string MaPhieuUng {  get; set; }
 
         [Required][StringLength(10)]
-        [ForeignKey(nameof(NhanVien))]
+        [ForeignKey(nameof(MaNhanVien))]
         public string MaNhanVien {  get; set; }
-        public PhieuUngLuong PhieuUngLuongNhanVien1 { get; set; }
+        public NhanVien PhieuUngLuongNhanVien { get; set; }
 
         [Required]
         public float MucUngLuong {  get; set; }
 
         [Required]
         public DateTime NgayUng {  get; set; }
+        public CTBangLuong CTBangLuongPhieuUngLuong { get; set; }
 
     }
 }

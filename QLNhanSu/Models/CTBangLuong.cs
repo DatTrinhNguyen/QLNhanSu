@@ -11,31 +11,31 @@ namespace QLNhanSu.Models
     public class CTBangLuong
     {
         [StringLength(10)]
-        [ForeignKey(nameof(BangLuong))]
+        [ForeignKey(nameof(MaBangLuong))]
         public string MaBangLuong {  get; set; }
-        public CTBangLuong CTBangLuongBangLuong {  set; get; }
+        public BangLuong CTBangLuongBangLuong {  set; get; }
 
         [Required]
-        [StringLength(10)]
-        [ForeignKey (nameof(KyLuong))]
+        [StringLength(8)]
+        [ForeignKey (nameof(MaKyLuong))]
         public string MaKyLuong { get; set; }
-        public CTBangLuong CTBangLuongKyLuong { get; set; }
+        public KyLuong CTBangLuongKyLuong { get; set; }
 
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(NhanVien))]
+        [ForeignKey(nameof(MaNhanVien))]
         public string MaNhanVien {  get; set; }
-        public CTBangLuong CTBangLuongNhanVien { get; set; }
+        public NhanVien CTBangLuongNhanVien { get; set; }
         
         [StringLength(10)]
-        [ForeignKey(nameof(PhuCap))]
+        [ForeignKey(nameof(MaPhuCap))]
         public string MaPhuCap {  get; set; }
-        public CTBangLuong CTBangLuongPhuCap { get; set; }
+        public PhuCap CTBangLuongPhuCap { get; set; }
 
         [StringLength (10)]
-        [ForeignKey(nameof(PhieuUngLuong))]
+        [ForeignKey(nameof(MaPhieuUng))]
         public string MaPhieuUng { get; set; }
-        public CTBangLuong CTBangLuongPhieuUng { get; set;}
+        public PhieuUngLuong CTBangLuongPhieuUng { get; set;}
 
         public float LuongPhuTroi { get; set; }
 

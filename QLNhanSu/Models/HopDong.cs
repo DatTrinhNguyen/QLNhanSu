@@ -14,37 +14,40 @@ namespace QLNhanSu.Models
         [StringLength(10)]
         public string MaHD {  get; set; }
         [Required][StringLength(10)]
-        [ForeignKey(nameof(PhongBan))]
+        [ForeignKey(nameof(MaPhongBan))]
         public string MaPhongBan {  get; set; }
-        public HopDong HopDongPhongBan { get; set; }
+        public PhongBan HopDongPhongBan { get; set; }
 
         [Required][StringLength(10)]
-        [ForeignKey(nameof(NhanVien))]
+        [ForeignKey(nameof(MaNhanVien))]
         public string MaNhanVien {  get; set; }
-        public HopDong HopDongNhanVien { get; set; }
+        public NhanVien HopDongNhanVien { get; set; }
 
         [Required][StringLength(10)]
-        [ForeignKey(nameof(ChucVu))]
+        [ForeignKey(nameof(MaChucVu))]
         public string MaChucVu {  get; set; }
-        public HopDong HopDongChucVu { get; set; }
+        public ChucVu HopDongChucVu { get; set; }
 
         [Required][StringLength(10)]
-        [ForeignKey(nameof(QuyetDinh))]
+        [ForeignKey(nameof(MaQuyetDinh))]
         public string MaQuyetDinh {  get; set; }
-        public HopDong HopDongQuyetDinh { get; set; }
+        public QuyetDinh HopDongQuyetDinh { get; set; }
 
         [Required][StringLength(10)]
-        [ForeignKey(nameof(CheDoLamViec))]
+        [ForeignKey(nameof(MaCheDo))]
         public string MaCheDo {  get; set; }
-        public HopDong HopDongCheDoLamViec { get; set; }
+        public CheDoLamViec HopDongCheDoLamViec { get; set; }
 
         [Required]
-        [ForeignKey(nameof(LoaiHD))]
+        [ForeignKey(nameof(IDHD))]
         public int IDHD {  get; set; }
-        public HopDong HopDongLoaiHD { get; set; }
+        public LoaiHD HopDongLoaiHD { get; set; }
 
         [Required]
         public float NgayKy {  get; set; }
+
+        public BaoHiemNhanVien HopDongBaoHiemNhanVien {  get; set; }
+        public CTHopDong CTHopDongHopDong {  get; set; }
 
     }
 }

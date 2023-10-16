@@ -14,5 +14,6 @@ namespace QLNhanSu.Models
         [Required]
         [StringLength(250)]
         public string TenBH { get; set; }
+        public BaoHiemNhanVien BaoHiemNhanVienBaoHiem { get; set; }
     }
 }

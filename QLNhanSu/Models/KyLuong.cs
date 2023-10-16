@@ -11,13 +11,16 @@ namespace QLNhanSu.Models
     {
         [Key]
         [StringLength(8)]
-        public string MaKyLuong {  get; set; }
+        public string MaKyLuong { get; set; }
 
         [Required]
-        public int Thang {  get; set; }
+        public int Thang { get; set; }
 
         [Required]
-        public int Nam {  get; set; }
+        public int Nam { get; set; }
 
+        public ICollection<BangCong> BangCongs { get; set; }
+        public CTBangLuong CTBangLuongKyLuong { get; set; }
     }
+
 }

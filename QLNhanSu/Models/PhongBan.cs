@@ -19,5 +19,6 @@ namespace QLNhanSu.Models
 
         [Required]
         public float PhuCapPB {  get; set; }
+        public HopDong HopDongPhongBan { get; set; }
     }
 }

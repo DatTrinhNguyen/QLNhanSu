@@ -18,5 +18,8 @@ namespace QLNhanSu.Models
 
         [Required]
         public float MucPhuCap { get; set; }
+        public CTBangLuong CTBangLuongPhuCap { get; set; }
+        public CTHopDong CTHopDongPhuCap { get; set; }
+
     }
 }

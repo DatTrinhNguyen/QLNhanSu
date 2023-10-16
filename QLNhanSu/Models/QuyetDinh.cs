@@ -19,6 +19,7 @@ namespace QLNhanSu.Models
 
         [Required]
         public DateTime NgayQuyetDinh { get;set; }
+        public HopDong HopDongQuyetDinh { get; set; }
 
     }
 }

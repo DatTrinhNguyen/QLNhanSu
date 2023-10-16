@@ -18,5 +18,6 @@ namespace QLNhanSu.Models
 
         [Required]
         public float HeSoLuong {  get; set;}
+        public CTBangCong CTBangCongLoaiCong { get; set;}
     }
 }

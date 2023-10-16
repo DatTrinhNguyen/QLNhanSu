@@ -17,9 +17,9 @@ namespace QLNhanSu.Models
 
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(NhanVien))]
+        [ForeignKey(nameof(MaNhanVien))]
         public string MaNhanVien {  get; set; }
-        public NghiPhep NghiPhepNhanVien { get; set; }
+        public NhanVien NghiPhepNhanVien { get; set; }
         
         public DateTime NgayNghi { get; set; }
     }

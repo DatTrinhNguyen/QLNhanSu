@@ -13,9 +13,16 @@ namespace QLNhanSu.Models
     {
         [Key]
         [StringLength(10)]
-        public string MaBangLuong {  get; set; }
+        public string MaBangLuong { get; set; }
 
         [Required]
         public DateTime NgayPhatLuong { get; set; }
+
+        [Required]
+        public int CTBangLuongID { get; set; }
+
+        
+        public CTBangLuong CTBangLuong { get; set; }
     }
+
 }

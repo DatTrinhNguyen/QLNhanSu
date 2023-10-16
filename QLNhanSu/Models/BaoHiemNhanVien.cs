@@ -15,15 +15,15 @@ namespace QLNhanSu.Models
         public string MaBH {  get; set; }
 
         [Required]
-        [ForeignKey(nameof(BaoHiem))]
+        [ForeignKey(nameof(ID))]
         public int ID {  get; set; }
-        public BaoHiemNhanVien BaoHiemNhanVienBaoHiem { get; set; }
+        public BaoHiem BaoHiemNhanVienBaoHiem { get; set; }
 
         [Required]
         [StringLength (10)]
-        [ForeignKey(nameof(HopDong))]
+        [ForeignKey(nameof(MaHD))]
         public string MaHD {  get; set; }
-        public BaoHiemNhanVien BaoHiemNhanVienHopDong { get; set; }
+        public HopDong BaoHiemNhanVienHopDong { get; set; }
 
         [Required]
         public float MucDong {  get; set; }

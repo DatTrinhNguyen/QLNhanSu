@@ -18,5 +18,6 @@ namespace QLNhanSu.Models
         [Required]
         [StringLength(10)]
         public string TimeLam1Week { get; set; }
+        public HopDong HopDongCheDoLamViec { get; set; }
     }
 }

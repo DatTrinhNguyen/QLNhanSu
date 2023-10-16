@@ -14,5 +14,6 @@ namespace QLNhanSu.Models
         [Required]
         [StringLength(250)]
         public string TenHopDong {  get; set; }
+        public HopDong HopDongLoaiHD { get; set; }
     }
 }
