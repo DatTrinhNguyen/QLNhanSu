@@ -10,38 +10,43 @@ namespace QLNhanSu.Models
 {
     public class CTBangCong
     {
-        [Required]
-        [StringLength(10)]
-        [ForeignKey(nameof(MaNhanVien))]
-        public string MaNhanVien {  get; set; }
-        public NhanVien CTBangCongNhanVien { get; set; }
-        
+        [Key]
+        public int CTBangCongId { get; set; }
 
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(MaLoaiCa))]
-        public string MaLoaiCa {  get; set; }
-        public LoaiCa CTBangCongLoaiCa { get; set; }
+        public string MaNhanVien { get; set; }
+
+        [ForeignKey("MaNhanVien")]
+        public virtual NhanVien NhanVien { get; set; }
 
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(MaLoaiCong))]
+        public string MaLoaiCa { get; set; }
+
+        [ForeignKey("MaLoaiCa")]
+        public virtual LoaiCa LoaiCa { get; set; }
+
+        [Required]
+        [StringLength(10)]
         public string MaLoaiCong { get; set; }
-        public LoaiCong CTBangCongLoaiCong { get; set; }
+
+        [ForeignKey("MaLoaiCong")]
+        public virtual LoaiCong LoaiCong { get; set; }
 
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(MaPhieuPT))]
-        public string MaPhieuPT {  get; set; }
-        public PhieuPhuTroi CTBangCongPhieuPhuTroi {  get; set; }
+        public string MaPhieuPT { get; set; }
 
+        [ForeignKey("MaPhieuPT")]
+        public virtual PhieuPhuTroi PhieuPhuTroi { get; set; }
 
         [Required]
-        public DateTime Ngay {  get; set; }
+        public DateTime Ngay { get; set; }
 
-        
         public string SoGioLamCoBan { get; set; }
         public string SoGioLamPT { get; set; }
-
     }
+
+
 }

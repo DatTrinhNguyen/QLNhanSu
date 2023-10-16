@@ -10,40 +10,50 @@ namespace QLNhanSu.Models
 {
     public class CTBangLuong
     {
-        [StringLength(10)]
-        [ForeignKey(nameof(MaBangLuong))]
-        public string MaBangLuong {  get; set; }
-        public BangLuong CTBangLuongBangLuong {  set; get; }
+        [Key]
+        public int CTBangLuongID { get; set; }
+
+        [Required]
+        [StringLength(10)]    
+        public string MaBangLuong { get; set; }
+
+        [ForeignKey("MaBangLuong")]
+        public virtual BangLuong BangLuong { get; set; }
 
         [Required]
         [StringLength(8)]
-        [ForeignKey (nameof(MaKyLuong))]
         public string MaKyLuong { get; set; }
-        public KyLuong CTBangLuongKyLuong { get; set; }
+
+        [ForeignKey("MaKyLuong")]
+        public virtual KyLuong KyLuong { get; set; }     
 
         [Required]
         [StringLength(10)]
-        [ForeignKey(nameof(MaNhanVien))]
-        public string MaNhanVien {  get; set; }
-        public NhanVien CTBangLuongNhanVien { get; set; }
-        
-        [StringLength(10)]
-        [ForeignKey(nameof(MaPhuCap))]
-        public string MaPhuCap {  get; set; }
-        public PhuCap CTBangLuongPhuCap { get; set; }
+        public string MaNhanVien { get; set; }
 
-        [StringLength (10)]
-        [ForeignKey(nameof(MaPhieuUng))]
-        public string MaPhieuUng { get; set; }
-        public PhieuUngLuong CTBangLuongPhieuUng { get; set;}
+        [ForeignKey("MaNhanVien")]
+        public virtual NhanVien NhanVien { get; set; }
+
+
+        [StringLength(10)]
+        public string MaPhuCap { get; set; }
+
+        [ForeignKey("MaPhuCap")]
+        public virtual PhuCap PhuCap { get; set; }
+
+        [StringLength(10)]
+        public string MaPhieuUng {  get; set; }
+
+        [ForeignKey("MaPhieuUng")]
+        public virtual PhieuUngLuong PhieuUngLuong { get; set; }
+
+
 
         public float LuongPhuTroi { get; set; }
-
         public float LuongCoBan { get; set; }
-
-        public float TongLuong {  get; set; }
-
+        public float TongLuong { get; set; }
 
 
+        
     }
 }

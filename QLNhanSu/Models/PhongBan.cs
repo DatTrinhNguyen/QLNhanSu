@@ -11,14 +11,16 @@ namespace QLNhanSu.Models
     {
         [Key]
         [StringLength(10)]
-        public string MaPhongBan {  get; set; }
+        public string MaPhongBan { get; set; }
 
         [StringLength(250)]
         [Required]
         public string TenPhongBan { get; set; }
 
         [Required]
-        public float PhuCapPB {  get; set; }
-        public HopDong HopDongPhongBan { get; set; }
+        public float PhuCapPB { get; set; }
+
+        public virtual ICollection<HopDong> HopDongPhongBan { get; set; }
     }
+
 }

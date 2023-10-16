@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace QLNhanSu.Models
 {
@@ -12,19 +13,18 @@ namespace QLNhanSu.Models
     {
         [Key]
         [StringLength(10)]
-        public string MaPhieuUng {  get; set; }
+        public string MaPhieuUng { get; set; }
 
-        [Required][StringLength(10)]
-        [ForeignKey(nameof(MaNhanVien))]
+        [Required]
+        [StringLength(10)]
         public string MaNhanVien {  get; set; }
-        public NhanVien PhieuUngLuongNhanVien { get; set; }
 
-        [Required]
-        public float MucUngLuong {  get; set; }
+        [ForeignKey("MaNhanVien")]
+        public NhanVien NhanVien { get; set; }
+      
 
-        [Required]
-        public DateTime NgayUng {  get; set; }
-        public CTBangLuong CTBangLuongPhieuUngLuong { get; set; }
-
+        public virtual ICollection<CTBangLuong> CTBangLuongPhieuUngLuong { get; set; }
+        public float MucUngLuong { get; set; }
+        public DateTime NgayUng { get; set; }
     }
 }

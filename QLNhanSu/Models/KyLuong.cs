@@ -19,8 +19,8 @@ namespace QLNhanSu.Models
         [Required]
         public int Nam { get; set; }
 
-        public ICollection<BangCong> BangCongs { get; set; }
-        public CTBangLuong CTBangLuongKyLuong { get; set; }
+        public virtual ICollection<BangCong> BangCongs { get; set; }
+        public virtual ICollection<CTBangLuong> CTBangLuongKyLuong { get; set; }
     }
 
 }

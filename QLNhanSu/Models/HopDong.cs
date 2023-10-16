@@ -12,42 +12,56 @@ namespace QLNhanSu.Models
     {
         [Key]
         [StringLength(10)]
-        public string MaHD {  get; set; }
-        [Required][StringLength(10)]
-        [ForeignKey(nameof(MaPhongBan))]
+        public string MaHD { get; set; }
+
+        [Required]
+        [StringLength(10)]
         public string MaPhongBan {  get; set; }
-        public PhongBan HopDongPhongBan { get; set; }
 
-        [Required][StringLength(10)]
-        [ForeignKey(nameof(MaNhanVien))]
+        [ForeignKey("MaPhongBan")]
+        public PhongBan PhongBan { get; set; }
+
+        [Required]
+        [StringLength(10)]  
         public string MaNhanVien {  get; set; }
-        public NhanVien HopDongNhanVien { get; set; }
 
-        [Required][StringLength(10)]
-        [ForeignKey(nameof(MaChucVu))]
+        [ForeignKey("MaNhanVien")]
+        public NhanVien NhanVien { get; set; }
+
+        [Required]
+        [StringLength(10)]
         public string MaChucVu {  get; set; }
-        public ChucVu HopDongChucVu { get; set; }
 
-        [Required][StringLength(10)]
-        [ForeignKey(nameof(MaQuyetDinh))]
+        [ForeignKey("MaChucVu")]
+        public ChucVu ChucVu { get; set; }
+
+        [Required]
+        [StringLength(10)]
         public string MaQuyetDinh {  get; set; }
-        public QuyetDinh HopDongQuyetDinh { get; set; }
 
-        [Required][StringLength(10)]
-        [ForeignKey(nameof(MaCheDo))]
-        public string MaCheDo {  get; set; }
-        public CheDoLamViec HopDongCheDoLamViec { get; set; }
+        [ForeignKey("MaQuyetDinh")]
+        public QuyetDinh QuyetDinh { get; set; }
+        
+
 
         [Required]
-        [ForeignKey(nameof(IDHD))]
         public int IDHD {  get; set; }
-        public LoaiHD HopDongLoaiHD { get; set; }
 
+        [ForeignKey("IDHD")]
+        public LoaiHD LoaiHD { get; set; }
+       
+
+        [StringLength(10)]
         [Required]
-        public float NgayKy {  get; set; }
+        public string MaCheDo {  get; set; }
 
-        public BaoHiemNhanVien HopDongBaoHiemNhanVien {  get; set; }
-        public CTHopDong CTHopDongHopDong {  get; set; }
+        [ForeignKey("MaCheDo")]
+        public CheDoLamViec CheDoLamViec { get; set; }
 
+        public float NgayKy { get; set; }
+
+
+        public virtual ICollection<BaoHiemNhanVien> HopDongBaoHiemNhanVien { get; set; }
+        public virtual ICollection<CTPhuCap> CTHopDongHopDong { get; set; }
     }
 }

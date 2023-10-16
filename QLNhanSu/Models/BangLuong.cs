@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -17,12 +18,8 @@ namespace QLNhanSu.Models
 
         [Required]
         public DateTime NgayPhatLuong { get; set; }
-
-        [Required]
-        public int CTBangLuongID { get; set; }
-
-        
-        public CTBangLuong CTBangLuong { get; set; }
+   
+        public virtual ICollection<CTBangLuong> CTBangLuongs { get; set; }
     }
 
 }

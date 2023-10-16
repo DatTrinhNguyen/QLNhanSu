@@ -64,6 +64,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BangCong.cs" />
     <Compile Include="Models\BangLuong.cs" />
     <Compile Include="Models\CTBangCong.cs" />
@@ -72,7 +73,7 @@
     <Compile Include="Models\CheDoLamViec.cs" />
     <Compile Include="Models\ChucVu.cs" />
     <Compile Include="Models\BaoHiem.cs" />
-    <Compile Include="Models\CTHopDong.cs" />
+    <Compile Include="Models\CTPhuCap.cs" />
     <Compile Include="Models\HopDong.cs" />
     <Compile Include="Models\KyLuong.cs" />
     <Compile Include="Models\LoaiCa.cs" />

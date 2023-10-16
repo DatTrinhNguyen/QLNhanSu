@@ -16,9 +16,11 @@ namespace QLNhanSu.Models
 
         [StringLength(8)]
         [Required]
-        public string MaKyLuong { get; set; } 
+        public string MaKyLuong { get; set; }
 
-        public KyLuong KyLuong { get; set; } 
+        [ForeignKey("MaKyLuong")]
+        public virtual KyLuong KyLuong { get; set; }
+
         [Required]
         public DateTime NgayLapBang { get; set; }
     }

@@ -8,32 +8,25 @@ using System.Threading.Tasks;
 
 namespace QLNhanSu.Models
 {
-    public class BaoHiemNhanVien
+    public class CTPhuCap
     {
         [Key]
-        [StringLength(10)]
-        public string MaBH { get; set; }
-
+        public int CTPhuCapID { get; set; }
         [Required]
-        public int ID { get; set; }
+        [StringLength(10)]
+        public string MaPhuCap {  get; set; }
 
-
-        [ForeignKey("ID")]
-        public virtual BaoHiem BaoHiem { get; set; }
+        [ForeignKey("MaPhuCap")]
+        public virtual PhuCap PhuCap { get; set; }
 
         [Required]
         [StringLength(10)]
-        public string MaHD { get; set; }
+        public string MaHD {  get; set; }
 
         [ForeignKey("MaHD")]
         public virtual HopDong HopDong { get; set; }
-
-
-        public float MucDong { get; set; }
-
-        [Required]
-        public DateTime NgayDong { get; set; }
+      
+        public DateTime ThoiHan {  get; set; }
 
     }
-
 }

@@ -11,7 +11,7 @@ namespace QLNhanSu.Models
     {
         [Key]
         [StringLength(10)]
-        public string MaLoaiCa {  get; set; }
+        public string MaLoaiCa { get; set; }
 
         [Required]
         [StringLength(250)]
@@ -20,6 +20,7 @@ namespace QLNhanSu.Models
         [Required]
         [StringLength(250)]
         public string MoTa { get; set; }
-        public CTBangCong CTBangCongLoaiCa { get; set; }
+
+        public virtual ICollection<CTBangCong> CTBangCongLoaiCa { get; set; }
     }
 }

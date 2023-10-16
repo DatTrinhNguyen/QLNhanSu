@@ -23,7 +23,7 @@ namespace QLNhanSu.Models
         public virtual DbSet<BangLuong> BangLuongs { get; set; }
         public virtual DbSet<BaoHiem> BaoHiems { get; set; }
         public virtual DbSet<BaoHiemNhanVien> BaoHiemNhanViens { get; set; }
-        public virtual DbSet<CTHopDong> CTHopDongs { get; set; }
+        public virtual DbSet<CTPhuCap> CTHopDongs { get; set; }
         public virtual DbSet<CheDoLamViec> CheDoLamViecs { get; set; }
         public virtual DbSet<ChucVu> ChucVus { get; set; }
         public virtual DbSet<HopDong> HopDongs { get; set; }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,15 +12,14 @@ namespace QLNhanSu.Models
     {
         [Key]
         [Required]
-        public string MaQuyetDinh {  get; set; }
+        public string MaQuyetDinh { get; set; }
 
         [Required]
         [StringLength(250)]
-        public string TenQuyetDinh { get;set; }
+        public string TenQuyetDinh { get; set; }
 
         [Required]
-        public DateTime NgayQuyetDinh { get;set; }
-        public HopDong HopDongQuyetDinh { get; set; }
-
+        public DateTime NgayQuyetDinh { get; set; }
+        public virtual ICollection<HopDong> HopDongQuyetDinh { get; set; }
     }
 }
