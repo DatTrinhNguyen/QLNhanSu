@@ -11,8 +11,6 @@ namespace QLNhanSu.Models
     public class CTBangLuong
     {
         [Key]
-        public int CTBangLuongID { get; set; }
-
         [Required]
         [StringLength(10)]    
         public string MaBangLuong { get; set; }

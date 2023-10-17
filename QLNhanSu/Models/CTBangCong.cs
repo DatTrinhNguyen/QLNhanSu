@@ -11,7 +11,10 @@ namespace QLNhanSu.Models
     public class CTBangCong
     {
         [Key]
-        public int CTBangCongId { get; set; }
+        [StringLength(10)]
+        public string MaBangCong { get; set; }
+        [ForeignKey("MaBangCong")]
+        public virtual BangCong BangCong { get; set; }
 
         [Required]
         [StringLength(10)]

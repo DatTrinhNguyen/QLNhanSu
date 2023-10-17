@@ -23,6 +23,7 @@ namespace QLNhanSu.Models
 
         [Required]
         public DateTime NgayLapBang { get; set; }
+        public virtual ICollection<CTBangCong> CTBangCongs { get; set; }
     }
 
 }

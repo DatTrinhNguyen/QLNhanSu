@@ -10,8 +10,7 @@ namespace QLNhanSu.Models
 {
     public class CTPhuCap
     {
-        [Key]
-        public int CTPhuCapID { get; set; }
+        
         [Required]
         [StringLength(10)]
         public string MaPhuCap {  get; set; }
@@ -19,6 +18,7 @@ namespace QLNhanSu.Models
         [ForeignKey("MaPhuCap")]
         public virtual PhuCap PhuCap { get; set; }
 
+        [Key]
         [Required]
         [StringLength(10)]
         public string MaHD {  get; set; }
